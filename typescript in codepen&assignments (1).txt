@@ -1,0 +1,9 @@
+To write TypeScript file in codepen,
+click on setting button and choose javascript preprocessor as TypeScript.
+Now you can see three file HTML,CSS , JS(TypeScript) in your codepen.
+
+assignments
+-----------
+1.Create Empoyee type with empno,name,salary and designation properties.Then, create an array of Employee type with 5 employee objects in it.Finally,iterate that array and print details of 5 employees to console.
+
+2. Create a function with one default parameter, one optional parameter and one rest parameter and test it.

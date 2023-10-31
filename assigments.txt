@@ -1,0 +1,6 @@
+Dear students, Try to get answers to the  following questions
+	1. Difference between library and framework
+	2. What is modularisation and identify its benifits
+	3. What is a Single plage application & how it improves User experience & faster            page loading(UX)
+	4.Why an angular component has 3 files?
+	5.How to place compiled angular app into web server?

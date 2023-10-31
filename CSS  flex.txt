@@ -1,0 +1,28 @@
+CSS flex
+--------
+display:inline/block   inline-block     flex
+
+flex
+flex-direction
+flex-wrap
+
+justify-content  (horizontal)
+	center
+	flex-start
+	flex-end
+	space-around
+	space-between
+
+
+align-items       (Vertical)
+	center
+	flex-start
+	flex-end
+
+
+align-content
+	space-around
+	space-between
+
+
+

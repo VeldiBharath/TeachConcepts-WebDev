@@ -1,0 +1,105 @@
+registration form
+------------------
+ <form class="form" #registerForm="ngForm" 
+                        (ngSubmit)="registerForm.form.valid && onSubmit()" >
+                        <div class=" form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" [(ngModel)]="userModal.name" name="name"
+                                #name="ngModel" required>
+                            <span class="text-danger"
+                                *ngIf="(name.touched || registerForm.submitted) && name.errors?.required">
+                                Name is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" [(ngModel)]="userModal.email" name="email"
+                                #email="ngModel" required email>
+                            <span class="text-danger"
+                                *ngIf="(email.touched || registerForm.submitted) && email.errors?.required">
+                                Email is required
+                            </span>
+                            <span class="text-danger" *ngIf="email.touched && email.errors?.email">
+                                Enter a valid email address
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input type="text" class="form-control" [(ngModel)]="userModal.username" name="username"
+                                #username="ngModel" appValidateUserName required>
+                            <span class="text-danger"
+                                *ngIf="(username.touched || registerForm.submitted) && username.errors?.required">
+                                User Name is required
+                            </span>
+                            <span class="text-danger" *ngIf="username.touched && username.errors?.userNameNotAvailable">
+                                User Name not available
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" [(ngModel)]="userModal.password" name="password"
+                                #password="ngModel" appPasswordPattern required>
+                            <span class="text-danger"
+                                *ngIf="(password.touched || registerForm.submitted) && password.errors?.required">
+                                Password is required
+                            </span>
+                            <span class="text-danger" *ngIf="password.touched && password.errors?.invalidPassword">
+                                Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                                letter and 1 number
+                            </span>
+                        </div>
+                       
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Register</button>
+                        </div>
+                    </form>
+
+
+
+
+
+component class
+---------------
+import { Component, OnDestroy, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent  {
+  
+ 
+  users=[];
+  userModal = new User();
+
+    constructor() { }
+
+  onSubmit(){    
+    
+    //create new user object
+      let newObj=new User();
+
+      //assign data of userModal obj to new user obj
+      newObj={...this.userModal};
+
+      //push new user obj to users array
+      this.users.push(newObj)
+   
+      console.log(this.users);
+      
+     
+    
+  }
+
+}
+
+
+
+export class User {
+  public name: string;
+  public email: string;
+  public username: string;
+  public password: string;
+  
+}

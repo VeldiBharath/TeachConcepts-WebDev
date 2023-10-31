@@ -1,0 +1,16 @@
+1. Take an empty students array 
+
+	a) push two student objects
+	b)insert new student object to begining of array
+	c)remove 2nd object from the array
+	d)remove object from index 1 and add new student object in that place
+	e)Insert new student object at index 2
+
+
+2.Take a product object with properties product number,name,brand, price,discount.Print the final product of price after discount
+
+3.Take employee object with eno,name,desingantion and basic. Print salary of employee .
+	Hint: salary= basic+hra+da
+		where
+			hra=15% of basic
+			da=10% of basic

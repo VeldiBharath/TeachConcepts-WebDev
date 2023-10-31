@@ -1,0 +1,62 @@
+//import express module
+const exp=require("express");
+
+//get express object
+const app=exp();
+
+
+//create sample middleware
+const middleware1=(req,res,next)=>{
+    console.log("middleware1 is executed");
+    next();
+}
+
+
+const middleware2=(req,res,next)=>{
+    console.log("middleware2 is executed");
+    next();
+}
+//using middleware
+app.use(middleware1)
+app.use(middleware2)
+
+
+
+
+
+//define routes
+
+//http://localhost:3000/getusers
+app.get("/getusers",(req,res)=>{
+
+    res.send({message:"All users Data"});
+})
+
+
+
+
+//http://localhost:3000/getuser/<username>
+app.get("/getuser/:username",(req,res)=>{
+
+  res.send({message:"data of user "+req.params.username})
+
+})
+
+//http://localhost:3000/createuser
+app.post("/createuser",(req,res)=>{
+    res.send({message:"User created"})
+})
+
+//http://localhost:3000/updateuser
+app.put("/updateuser",(req,res)=>{
+    res.send({message:"User data updated"})
+})
+
+
+//http://localhost:3000/removeuser/<username>
+app.delete("/removeuser/:username",(req,res)=>{
+    res.send({message:"User "+req.params.username+" is removed"})
+})
+
+//assign port number
+app.listen(3000,()=>{console.log("Server started on port 3000")})

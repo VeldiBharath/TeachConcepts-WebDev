@@ -1,0 +1,229 @@
+
+card
+----
+card
+card-header
+card-body
+card-footer
+card-link
+card-img-overlay
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+card-deck & card-columns
+------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+horizontal cards
+----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+vertical alignment of row content
+---------------------------------
+	align-items-start
+	align-items-center
+	align-items-end
+
+
+Horizontal alignment
+--------------------
+	justify-content-start
+	justify-content-center
+	justify-content-end
+	justify-content-around
+	justify-content-between
+
+
+
+
+
+
+
+
+
+
+
+dropdown
+--------
+dropdown
+dropdown-toggle(for button)
+dropdown-menu
+dropdown-item
+
+
+
+dropdown-divider
+dropdown-header
+
+
+btn-group
+
+
+
+
+
+
+
+
+
+
+
+
+collapse
+--------
+collapse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Modal classes
+-------------
+modal
+	fade
+modal-dialog
+	modal-sm
+	modal-lg
+	modal-xl
+	modal-dialog-centered
+	modal-dialog-scrollable
+modal-content
+	modal-header
+	modal-body
+	modal-footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+form classes
+------------
+form-group
+form-control
+	form-control-sm
+	form-control-lg
+
+for checkbox & radio
+--------------------
+form-check or form-check-inline
+form-check-label
+form-check-input
+
+select list
+-----------
+form-group
+form-control( for select class)
+
+
+
+
+
+button classes
+--------------
+btn 
+ btn-primary
+ btn-secondary
+ btn-success
+ btn-info
+ btn-warning
+ btn-danger
+ btn-dark
+ btn-light
+ btn-link
+
+ btn-outline-primary
+ btn-outline-secondary
+
+button sizes
+------------
+btn-lg
+btn-sm
+
+
+
+
+
+

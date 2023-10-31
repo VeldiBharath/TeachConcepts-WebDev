@@ -1,0 +1,137 @@
+Array operations
+----------------
+
+//declare an number array
+var numberArray=[10,20,30];
+
+console.log("before inserting");
+console.log(numberArray);
+
+
+//insert new element to end of array
+var lengthOfarrayAfterInsert=numberArray.push(40,50,60);
+console.log("after inserting");
+console.log(numberArray);
+console.log("length is ",lengthOfarrayAfterInsert);
+
+
+//insert 100,200 to start of array
+numberArray.unshift(100,200);
+console.log("after inserting to begining");
+console.log(numberArray);
+
+//remove an element from end of list
+var removedElement=numberArray.pop();
+console.log("after removal of last element");
+console.log(numberArray);
+console.log("removed element is ",removedElement);
+
+//remove element from starting
+var removedElementFromBegining=numberArray.shift();
+console.log("after removal of first element");
+console.log(numberArray);
+console.log("removed element is ",removedElementFromBegining);
+
+
+//remove element(s) from specific index
+var deletedElements1=numberArray.splice(2,2);
+console.log("after removal of  2 elements from index 2");
+console.log(numberArray);
+console.log("Removed elements are" ,deletedElements1);
+
+
+//remove element(s) from specific index and add new value
+var deletedElements2=numberArray.splice(2,1,1234);
+console.log("after removal of  1 element from index 2 and adding 1234");
+console.log(numberArray);
+console.log("Removed elements are" ,deletedElements2);
+
+
+
+
+Array iteration
+----------------
+var numberArray=[12,13,34,56,67,100];
+
+//iterate using for loop
+
+console.log("using for loop")
+
+for(var indx=0;indx<numberArray.length;indx++){
+
+    console.log(numberArray[indx])
+}
+
+
+
+//iterate using for-of loop
+console.log("using for-of loop")
+
+for(var n of numberArray){
+    console.log(n)
+}
+
+
+
+
+Operations on object
+---------------------
+
+var student={
+    name:"ravi",
+    age:21,
+    address:"Hyderabad"
+};
+
+
+//remove age
+delete student.age;
+
+//add course
+student.course="B.tech"
+student.fee=100000;
+
+
+console.log(student)
+//iterate student object
+for(var n in student){
+
+    console.log(n ,"is ",student[n])
+}
+
+
+Working with array of objects
+-----------------------------
+//take an array of 4 employee objects
+
+var employees=[{
+    eno:100,
+    empname:"suresh",
+    salary:100000
+},
+{
+    eno:200,
+    empname:"madhu",
+    salary:800000
+},
+{
+    eno:300,
+    empname:"pavan",
+    salary:700000
+},
+{
+    eno:400,
+    empname:"sravani",
+    salary:600000
+}];
+
+
+
+//iterate employees array
+for(var empObj of employees){
+    
+    //iterate empObj
+    for(var p in empObj){
+        console.log(p," is ",empObj[p])
+    }
+}

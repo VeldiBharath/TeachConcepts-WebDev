@@ -1,0 +1,321 @@
+Bootstrap 4.5 classes
+----------------------
+
+
+Rows & columns
+--------------
+
+row(12 cols)
+	col-sm-6 + col-sm-6
+
+col-sm-
+col-md-
+col-lg-
+col-xl-
+
+
+
+
+
+
+
+
+
+Display devices
+------------------
+extra small
+small
+medium
+large
+extra large
+
+
+container(fixed)
+container-fluid(full width)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FOR HEADINGS
+-------------
+display-1
+display-2
+display-3
+display-4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+text alignment classes
+---------------------
+text-center,  
+text-left,
+text-right,
+text-uppercase,
+text-lowercase,
+text-capitalize  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+text color classses
+--------------------
+text-muted, 
+text-primary, 
+text-success, 
+text-info, 
+text-warning, 
+text-danger
+text-secondary, 
+text-white, 
+text-dark, 
+text-body (default body color/often black) 
+text-light
+
+
+
+
+
+
+
+
+
+classes for background colors
+------------------------------
+bg-primary, 
+bg-success, 
+bg-info, 
+bg-warning, 
+bg-danger
+bg-secondary, 
+bg-dark 
+bg-light.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spacing classes
+---------------
+m for margin
+p for padding
+
+mt for margin-top
+pt for padding-top
+
+mb for margin-bottom
+pb for padding-bottom
+
+ml for margin-left
+pl for padding-left
+
+mr for margin-right
+pr for padding-right
+
+we can use the above classes with size values from 0 to 5.
+
+Ex: m-5   pb-3   etc..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+display classes
+----------------
+d-inline(appear in same line)
+d-block(appear in different line)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+image classes
+-------------
+rounded
+rounded-circle
+float-left    float:left
+float-right
+img-thumbnail
+img-fluid
+mx-auto d-block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Border classes
+--------------
+border
+border-top
+border-right
+border-bottom
+border-left
+
+border subtractive classes
+---------------------------
+border-0
+border-top-0
+border-right-0
+border-left-0
+border-bottom-0
+
+border color classes
+---------------------
+border border-primary
+border border-secondary
+border border-success
+border border-danger
+border border-warning
+
+border border-info
+
+border border-light
+
+border border-dark
+
+border border-white
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+table classes
+--------------
+table
+	table-striped
+	table-bordered
+	table-hover
+	table-dark
+	table-borderless
+	thead-dark(apply for <thead>)
+	table-sm(makes the table smaller by cutting cell padding in half)
+
+	table-responsive(place table inside of it)
+
+
+
+

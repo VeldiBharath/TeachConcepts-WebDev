@@ -1,0 +1,3 @@
+1. Create product class with instance data as productno,name,brand,MRP. Create 5 objects and push them into an array. Then, iretate that array and display the content of 5 objects to console.
+
+2.Create student class with instance data as rollno,name and marks array. Create 5 student objects and print the details of 5 students console as rollno,name and average of marks

@@ -1,0 +1,23 @@
+Copy and paste the below urls in browser to view the layout and then design
+---------------------------------------------------------------------------
+
+https://www.w3schools.com/bootstrap4/trybs_template1.htm
+
+
+
+https://getbootstrap.com/docs/4.0/examples/album/
+
+
+
+https://getbootstrap.com/docs/4.0/examples/checkout/
+
+
+
+https://getbootstrap.com/docs/4.0/examples/carousel/
+
+
+
+https://getbootstrap.com/docs/4.0/examples/jumbotron/
+
+
+https://getbootstrap.com/docs/4.0/examples/grid/

@@ -1,0 +1,150 @@
+
+
+nav tabs & pills
+-----------------
+nav (ul)
+	nav-tabs
+	nav-pills
+
+	justify-content-start
+	justify-content-center
+	justify-content-end
+	
+	nav-justified
+nav-item(li)
+nav-link(a)
+	active
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggleable / Dynamic Pills & Tabs
+---------------------------------
+data-toggle
+	pill
+	tab
+tab-content
+	tab-pane
+	container
+	active
+	fade
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+navbar classes
+-----------------------
+navbar(nav)
+	navbar-expand-sm
+	justify-content-center
+	bg-dark
+	navbar-dark
+navbar-brand (a)
+navbar-nav (ul)
+nav-item (li)
+nav-link (a)
+
+collapsible navbar classes
+--------------------------
+navbar-toggler( for button)
+navbar-toggler-icon(for span)
+collapse navbar-collapse(for div in which the nav menu contains)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+carousel
+--------
+carousel
+	slide
+carousel-inner
+	carousel-item
+
+for indicators
+--------------
+carousel-indicators
+
+for controls
+------------
+carousel-control-prev
+carousel-control-prev-icon
+carousel-control-next
+carousel-control-next-icon
+
+carousel-caption
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Layout design
+--------------
+https://www.w3schools.com/bootstrap4/trybs_template1.htm
+
+
+
+

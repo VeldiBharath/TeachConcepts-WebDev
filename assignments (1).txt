@@ -1,0 +1,10 @@
+assignments
+-----------
+1. Write a function to receive a number array and return big and small numbers of it
+	( You can write this as two prgrams even)
+2. Write a function to receive a number array and return sum of the numbers
+
+3. Write a function that receives a number and print all factors of it to console.
+4. Write a function that receives two numbers and print all even and odd numbers between them   to console.
+5. Write a function to receive a number and check whether it is prime or not
+	(Hint- prime number contains two factors only)

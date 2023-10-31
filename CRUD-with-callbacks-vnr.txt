@@ -1,0 +1,215 @@
+//import express module
+const exp = require("express");
+
+//get express object
+const app = exp();
+
+//import bcryptjs
+const bcryptjs=require("bcryptjs")
+
+//body parser middleware
+app.use(exp.json())
+
+
+//import mongodb client
+const mc = require("mongodb").MongoClient;
+
+//database url
+const dburl = "write database url here"
+
+let userCollObj;
+
+//connecting to DB server
+mc.connect(dburl, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
+
+    if (err) {
+        console.log("err in db connection ", err)
+    }
+    else {
+        //get database obj
+        let dbObj = client.db(" write database name")
+
+        //get collection obj
+        userCollObj = dbObj.collection("write collection name")
+
+        console.log("DB connection success")
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//define routes
+
+//http://localhost:3000/getusers
+app.get("/getusers", (req, res) => {
+
+    //read users from userscollection
+    userCollObj.find().toArray((err, usersArray) => {
+        if (err) {
+            console.log("err in reading users ", err)
+        }
+        else {
+            //send res to client
+            res.send({ message: usersArray })
+        }
+    })
+})
+
+
+
+
+
+//http://localhost:3000/getuser/<username>
+app.get("/getuser/:username", (req, res) => {
+
+    let userNameFromUrl = req.params.username;
+
+    //read user obj
+    userCollObj.findOne({ username: userNameFromUrl }, (err, userObj) => {
+        if (err) {
+            console.log("err in reading user ", err)
+        }
+        else {
+            res.send({ message: userObj })
+        }
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//http://localhost:3000/createuser
+app.post("/createuser", (req, res) => {
+
+    let userObj = req.body;
+    
+    //create hashed password
+    bcryptjs.hash(userObj.password,6,(err,hashedPw)=>{
+        if(err){
+            console.log("err in hash ",err)
+        }
+        else{
+            //replace plain pw with hashed pw
+            userObj.password=hashedPw;
+            //insert
+            userCollObj.insertOne(userObj,(err,success)=>{
+                if(err){
+                    console.log("err in user creation ",err)
+                }
+                else{
+                    res.send({message:"USer created"})
+                }
+            })
+        }
+    })
+  
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//http://localhost:3000/updateuser
+app.put("/updateuser", (req, res) => {
+   
+        let userObj=req.body;
+
+        //user update 
+        userCollObj.updateOne({username:userObj.username},
+            {$set:{
+                email:userObj.email,
+                city:userObj.city,
+                salary:userObj.salary,
+                age:userObj.age
+            }},(err,success)=>{
+                if(err){
+                    console.log("err in user update ",err)
+                }
+                else{
+                    res.send({message:"Update success"})
+                }
+            })
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//http://localhost:3000/removeuser/<username>
+app.delete("/removeuser/:username", (req, res) => {
+   
+    let usernameFromClient=req.params.username;
+
+    //remove user
+    userCollObj.deleteOne({username:usernameFromClient},(err,success)=>{
+        if(err){
+            console.log("err in user delete ",err)
+        }
+        else{
+            res.send({message:"User removed"})
+        }
+    })
+
+
+})
+
+//assign port number
+app.listen(3000, () => { console.log("Web Server started on port 3000") })

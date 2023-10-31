@@ -1,0 +1,131 @@
+search.pipe.ts
+--------------
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'search'
+})
+export class SearchPipe implements PipeTransform {
+
+  transform(dataArray: any[], searchTerm: string): any {
+    
+    
+    //if dataArray or searchTerm not existed
+     if(!dataArray || !searchTerm){
+       return dataArray;
+     }
+  
+    else{
+
+      return dataArray.filter(obj=>obj.title.toLowerCase().indexOf(searchTerm.toLowerCase())!==-1)
+    }
+
+
+
+  }
+
+}
+
+
+
+
+
+
+
+contactus.component.ts
+----------------------
+import { ThrowStmt } from '@angular/compiler';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { TestService } from '../test.service';
+
+@Component({
+  selector: 'app-contactus',
+  templateUrl: './contactus.component.html',
+  styleUrls: ['./contactus.component.css']
+})
+export class ContactusComponent implements OnInit {
+
+
+  searchTerm:string;
+  dataArray;
+
+  //inject DataService object
+  constructor(private ds:DataService){}
+
+  ngOnInit(){
+    this.ds.getData().subscribe(
+
+      res=>{
+        this.dataArray=res;
+      },
+
+      err=>{
+        console.log(err);
+        alert("Something went wrong")
+      }
+    )
+  }
+  
+
+}
+
+
+
+
+
+constctus.component.html
+------------------------
+
+
+<div class="container m-4">
+    <input type="text" class="form-control" placeholder="search by title" [(ngModel)]="searchTerm">
+</div>
+<table class="table">
+    <thead>
+        <th>UserID</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+    </thead>
+    <tr *ngFor="let obj of dataArray | search :searchTerm">
+        <td>{{obj.userId}}</td>
+        <td>{{obj.id}}</td>
+        <td>{{obj.title }}</td>
+        <td>{{obj.body}}</td>
+    </tr>
+</table>
+
+
+
+
+data.service.ts
+-----------------
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+
+export class DataService {
+
+ //inject HttpClient object
+ constructor(private hc:HttpClient){}
+
+ //making HTTP get req
+ getData():Observable<any>{
+
+  return   this.hc.get("https://jsonplaceholder.typicode.com/posts")
+ }
+
+
+ //get req to other api
+ getDataFromOtherApi():Observable<any>{
+
+  return  this.hc.get("https://api.mocki.io/v1/b043df5a")
+
+ }
+
+}

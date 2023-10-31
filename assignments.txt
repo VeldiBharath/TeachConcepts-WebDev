@@ -1,0 +1,10 @@
+1.design the template of following urls
+
+https://getbootstrap.com/docs/4.0/examples/album/
+
+https://getbootstrap.com/docs/4.0/examples/checkout/
+
+
+
+2. Write 5 function to implment 5 arithmetic operations
+

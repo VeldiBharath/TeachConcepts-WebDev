@@ -1,0 +1,2 @@
+1. Create a simple calculator app with 5 arithmetic operations
+2.Create a counter with increment and decrement options
